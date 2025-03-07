@@ -1,0 +1,18 @@
+
+
+
+/**
+* Login and registration screen
+**/
+
+.registration-container .login-img {
+   background-color: rgb(128, 128, 128);
+}
+
+.form-control {
+   background-color: lightgray;
+}
+
+button {
+   background-color: lightgray;
+}
