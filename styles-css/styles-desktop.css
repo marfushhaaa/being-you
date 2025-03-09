@@ -1,24 +1,29 @@
 @media (min-width: 786px) {
+
    /**
     * Login and registration screen
     **/
-    .registration-container {
+   .registration-container {
       grid-template-rows: 1fr 1fr;
       grid-template-areas:
-          "head-img content";
+         "head-img content";
       column-gap: 40px;
-      align-items: center;
+      align-items: start;
       max-width: 100%;
       height: 90vh;
-  }
+   }
 
-  .registration-container .login-img {
+   .registration-container .login-img {
       height: 96vh;
       width: 100%;
-  }
+   }
+
+   .registration-container h1 {
+      margin-top: 60px;
+   }
 
 
-  /**
+   /**
   * Fonts
   **/
    h1 {
@@ -56,7 +61,12 @@
    label {
       font-size: 1.286rem;
    }
+
    button {
       font-size: 1.286rem;
+   }
+
+   .messageDiv {
+      font-size: 1.143rem;
    }
 }

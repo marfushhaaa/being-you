@@ -144,3 +144,16 @@ button {
     margin-right: auto;
     border-radius: 10px;
 }
+
+.messageDiv {
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    min-height: 48px;
+    min-width: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 16px;
+}
