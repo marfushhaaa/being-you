@@ -56,3 +56,8 @@ button {
    font-weight: 600;
    line-height: 1.5;
 }
+button a{
+   font-size: 1.143rem;
+   font-weight: 600;
+   line-height: 1.5;
+}
