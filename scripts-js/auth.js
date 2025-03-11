@@ -10,6 +10,7 @@ import {
   setDoc,
   doc,
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -53,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (signUp) {
     signUp.addEventListener("click", async (event) => {
       event.preventDefault();
-      console.log("Кнопка регистрации нажата!");
 
       const username = document.getElementById("rUsername").value;
       const email = document.getElementById("rEmail").value;
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
           2000
         );
       } catch (error) {
-        console.error("Ошибка регистрации:", error.code, error.message);
+        console.error("Registration error:", error.code, error.message);
         showMessage(
           error.code === "auth/email-already-in-use"
             ? "Email address is already used!"
@@ -94,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (signIn) {
     signIn.addEventListener("click", async (event) => {
       event.preventDefault();
-      console.log("Кнопка входа нажата!");
 
       const email = document.getElementById("sEmail").value;
       const password = document.getElementById("sPassword").value;
@@ -110,11 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("loggedInUserId", user.uid);
 
         setTimeout(
-          () => (window.location.href = "./../../pages/main/index.html"),
+          () => (window.location.href = "./../../pages/user/index.html"),
           1500
         );
       } catch (error) {
-        console.error("Ошибка входа:", error.code, error.message);
+        console.error("Login error:", error.code, error.message);
         showMessage(
           error.code === "auth/invalid-credential"
             ? "Incorrect Email or Password"
