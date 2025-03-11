@@ -53,3 +53,19 @@ const firebaseConfig = {
       console.log("user id not found in storage");
    }
  })
+
+ 
+ /**
+  * Diese Methode ermöglicht logout vom User
+  */
+ const logoutButton = document.getElementById("logout");
+ logoutButton.addEventListener('click', ()=>{
+   localStorage.removeItem('loggedInUserId');
+   signOut(auth)
+   .then(()=>{
+      window.location.href = './../../pages/registration/index.html';
+   })
+   .catch((error)=>{
+      console.log('Signout error ', error);
+   })
+ })
