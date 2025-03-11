@@ -67,9 +67,12 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         const user = userCredential.user;
 
+        //POST Anfrage
         await setDoc(doc(db, "users", user.uid), { username, email, password });
 
         showMessage("Account created successfully", "signUpMessage");
+
+        console.log("POST request sent to Firebase Auth:", email);
         setTimeout(
           () =>
             (window.location.href = "./../../pages/registration/index.html"),

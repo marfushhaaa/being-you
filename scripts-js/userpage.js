@@ -34,12 +34,16 @@ const firebaseConfig = {
    const loggedInUserId = localStorage.getItem('loggedInUserId');
    if(loggedInUserId){
       const docRef = doc(db, "users", loggedInUserId);
+
+      //GET-Anfrage
       getDoc(docRef)
       .then((docSnap)=>{
          if(docSnap.exists()){
             const userData = docSnap.data();
             document.getElementById('loggedUserUsername').innerText = userData.username;
             document.getElementById('loggedUserEmail').innerText = userData.email;
+            
+            console.log("GET request sent to Firestore:", loggedInUserId);
          }
          else {
             console.log("no document found matching id");
@@ -54,7 +58,7 @@ const firebaseConfig = {
    }
  })
 
- 
+
  /**
   * Diese Methode ermöglicht logout vom User
   */
