@@ -33,9 +33,6 @@ const app = initializeApp(firebaseConfig);
 function showMessage(message, divId) {
   var messageDiv = document.getElementById(divId);
   messageDiv.style.display = "block";
-  messageDiv.style.marginLeft = "auto";
-  messageDiv.style.marginRight = "auto";
-  messageDiv.style.width = "max-content";
   messageDiv.innerHTML = message;
   messageDiv.style.opacity = 1;
   setTimeout(function () {

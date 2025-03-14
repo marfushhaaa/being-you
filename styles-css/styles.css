@@ -68,16 +68,15 @@ input, button {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0px;
-    padding: 16px;
-}
-
 :host,
 :root {
     --rem: 14;
 }
 
+.container {
+    margin: 0px;
+    padding: 16px;
+}
 
 /**
 * Login and registration screen
@@ -110,7 +109,7 @@ body {
     margin-bottom: 8px;
 }
 
-.registration-container p {
+.registration-container h6 {
     display: block;
     text-align: center;
     margin-top: 0px;
@@ -156,4 +155,165 @@ button {
     padding-left: 16px;
     padding-right: 16px;
     margin-top: 16px;
+}
+
+/**
+* Main page
+**/
+/*.main-container {
+    display: grid;
+    grid-template-rows: 80px 1fr 55px 48px;
+    grid-template-areas:
+        "main-header"
+        "main-content"
+        "main-footer"
+        "main-navigation";
+    gap: 8px;
+    align-items: start;
+    max-width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.main-container header {
+    border-radius: 0px;
+    height: 75px;
+    background-color: lightgray;
+    grid-area: main-header;
+}
+.main-container .content {
+    background-color: lightgray;
+    grid-area: main-content;
+}
+.main-container footer {
+    grid-area: main-footer;
+}
+.main-container nav {
+    border-radius: 0px;
+    background-color: lightgray;
+    grid-area: main-navigation;
+}
+
+#communityNameMain {
+}*/
+/*header {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 16px;
+    flex-shrink: 0;
+}
+nav {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 16px;
+    height: 70px;
+}
+footer, nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+footer {
+    bottom: 48px;
+}
+
+nav {
+    bottom: 0px; 
+    height: 48px;
+}
+*/
+/*.main-container main {
+    flex-grow: 1; 
+    overflow-y: auto; 
+}
+
+
+.header-div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.footer-div {
+    padding: 8px;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.aside-button {
+    height: 48px;
+    width: 48px;
+    background-color: gray;
+}
+
+footer {
+    margin: 8px;
+    border-radius: 0px;
+}
+footer .aside-button {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+}
+footer form {
+    margin-left: 8px;
+    margin-bottom: 0px;
+    border-style: hidden;
+}
+footer input {
+    border-style: hidden;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: transparent;
+}*/
+
+.main-container {
+    display: grid;
+    grid-template-rows: 75px 1fr 60px 70px;
+    grid-template-areas:
+        "main-header"
+        "main-content"
+        "main-footer"
+        "main-navigation";
+    height: 100vh;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.main-container header {
+    grid-area: main-header;
+    background-color: lightgray;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-container footer {
+    grid-area: main-footer;
+    background-color: lightgray;
+    position: sticky;
+    bottom: 70px;
+    z-index: 1000;
+}
+
+.main-container  nav {
+    grid-area: main-navigation;
+    background-color: lightgray;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.main-container  main {
+    grid-area: main-content;
+    overflow-y: auto;
+    background-color: lightgray;
 }
