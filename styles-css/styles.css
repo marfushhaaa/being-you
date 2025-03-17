@@ -64,7 +64,6 @@ input, button {
 * {
     font-family: "Inter", sans-serif;
     font-size: 14px;
-    border-radius: 10px;
     box-sizing: border-box;
 }
 
@@ -77,6 +76,30 @@ input, button {
     margin: 0px;
     padding: 16px;
 }
+input {
+    border-radius: 10px;
+}
+
+/**
+* Bootstrap styles
+**/
+.col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9 {
+    padding: 8px;
+}
+
+.daily-challenge .row {
+    margin: 0px;
+}
+
+.card-body {
+    background-color: #bababa;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    margin-right: 8px;
+    width: 130px;
+}
+
 
 /**
 * Login and registration screen
@@ -157,9 +180,7 @@ button {
     margin-top: 16px;
 }
 
-/**
-* Main page
-**/
+
 /*.main-container {
     display: grid;
     grid-template-rows: 80px 1fr 55px 48px;
@@ -230,12 +251,65 @@ nav {
 }
 
 
+
+
+
+footer {
+    margin: 8px;
+    border-radius: 0px;
+}
+
+}*/
+
+
+/**
+* Main page
+**/
+.main-container {
+    display: grid;
+    grid-template-rows: 75px 1fr 50px 50px;
+    grid-template-areas:
+        "main-header"
+        "main-content"
+        "main-footer"
+        "main-navigation";
+    height: 100vh;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0px;
+    gap: 8px;
+}
+
+.main-container header {
+    grid-area: main-header;
+    background-color: lightgray;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 16px;
+}
 .header-div {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+}
+.aside-button {
+    height: 48px;
+    width: 48px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.main-container footer {
+    grid-area: main-footer;
+    margin-left: 8px;
+    margin-right: 8px;
+    position: sticky;
+    z-index: 1000;
 }
 .footer-div {
     padding: 8px;
@@ -247,62 +321,21 @@ nav {
     justify-content: flex-start;
     align-items: center;
 }
-.aside-button {
-    height: 48px;
-    width: 48px;
-    background-color: gray;
-}
-
-footer {
-    margin: 8px;
-    border-radius: 0px;
-}
 footer .aside-button {
     height: 30px;
     width: 30px;
     background-color: gray;
 }
 footer form {
+    margin: 0px;
     margin-left: 8px;
-    margin-bottom: 0px;
-    border-style: hidden;
 }
 footer input {
     border-style: hidden;
-    font-size: 1.5rem;
     font-weight: 600;
     background-color: transparent;
-}*/
-
-.main-container {
-    display: grid;
-    grid-template-rows: 75px 1fr 60px 70px;
-    grid-template-areas:
-        "main-header"
-        "main-content"
-        "main-footer"
-        "main-navigation";
-    height: 100vh;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 0px;
 }
 
-.main-container header {
-    grid-area: main-header;
-    background-color: lightgray;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.main-container footer {
-    grid-area: main-footer;
-    background-color: lightgray;
-    position: sticky;
-    bottom: 70px;
-    z-index: 1000;
-}
 
 .main-container  nav {
     grid-area: main-navigation;
@@ -316,4 +349,100 @@ footer input {
     grid-area: main-content;
     overflow-y: auto;
     background-color: lightgray;
+    padding: 8px;
+    position: relative;
 }
+
+
+
+/**
+* Challenges
+**/
+.daily-challenge {
+    padding: 8px;
+    background-color: #bababa;
+    border-radius: 10px;
+}
+
+p.caption {
+    margin-bottom: 0px;
+}
+
+.challenge-img {
+    height: 80px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+}
+
+.challenge-name {
+    max-height: 3em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+}
+
+.challenge-description {
+    max-height: 3em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+
+.daily-challenge button {
+    min-width: 48px;
+    padding: 0px;
+}
+
+div.scrollmenu {
+    width: 100%;
+    height: fit-content;
+
+    /**used to scroll text*/
+    white-space: nowrap;    
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    /**keep scrolling when
+      *finger or cursor scrolling*/
+    -webkit-overflow-scrolling: touch; 
+    margin-top: 16px;
+    border-radius: 10px;
+}
+.card-title {
+    margin-bottom: 0px;
+
+    max-height: 3em;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+}
+
+.challenges .card-text {
+    display: none;
+}
+
+.challenges .card {
+    flex-direction: row;
+    background-color: transparent;
+    border-style: none;
+    width: fit-content;
+    border-radius: 10px;
+}
+.challenges button {
+    position: absolute;
+    z-index: 1000;
+    right: 8;
+    background-color: gray;
+    min-width: 48px;
+    width: 48px;
+    height: 62px;
+    border-radius: 10px;
+}
+
+
+

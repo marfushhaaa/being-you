@@ -3,6 +3,9 @@ a {
    text-decoration: none;
 }
 
+p.caption {
+   color: rgb(128, 128, 128)
+}
 
 /**
 * Login and registration screen
