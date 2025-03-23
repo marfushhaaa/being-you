@@ -35,13 +35,14 @@
                becoming you
             </h1>
 
-            <form class="form" action="" method="post">
+            <form class="form" action="" method="post" id="rForm">
                <div class="row">
                   <div class="col-md-12">
                      <div class="form-group">
                         <label for="name">Username *</label>
                         <input type="text" id="rUsername" name="Vname" class="form-control" placeholder="Ihres username"
-                           required="true">
+                           required="true" minlength="3" maxlength="20"  required pattern="^\S+$" title="Spaces are not allowed!"
+                           autofocus>
                      </div>
                   </div>
                </div>
@@ -61,7 +62,7 @@
                      <div class="form-group">
                         <label for="password">Passwort *</label>
                         <input type="password" id="rPassword" name="password" class="form-control"
-                           placeholder="Passwort von ihrem account" required="true">
+                           placeholder="Passwort von ihrem account" required="true" minlength="8">
                      </div>
                   </div>
                </div>

@@ -35,7 +35,7 @@
                becoming you
             </h1>
 
-            <form class="form">
+            <form class="form" id="sForm">
                <div class="row">
                   <div class="col-md-12">
                      <div class="form-group">
@@ -52,12 +52,12 @@
                      <div class="form-group">
                         <label for="password">Passwort *</label>
                         <input type="password" id="sPassword" name="password" class="form-control"
-                           placeholder="Passwort von ihrem account" required="true">
+                           placeholder="Passwort von ihrem account" required="true" minlength="8">
                      </div>
                   </div>
                </div>
 
-               <button type="button" id = "submitLogIn">Log in</button>
+               <button type="submit" id = "submitLogIn">Log in</button>
             </form>
 
             <hr />

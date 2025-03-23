@@ -50,6 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const signUp = document.getElementById("submitSignUp");
   if (signUp) {
     signUp.addEventListener("click", async (event) => {
+
+      const form = document.getElementById("rForm"); 
+      if (!form.checkValidity()) {
+        return; // abbrechen, wenn inputs nicht valid 
+      }
+
+
       event.preventDefault();
 
       const username = document.getElementById("rUsername").value;
@@ -93,6 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const signIn = document.getElementById("submitLogIn");
   if (signIn) {
     signIn.addEventListener("click", async (event) => {
+
+      const form = document.getElementById("sForm"); 
+      if (!form.checkValidity()) {
+        return; // abbrechen, wenn inputs nicht valid 
+      }
+
       event.preventDefault();
 
       const email = document.getElementById("sEmail").value;

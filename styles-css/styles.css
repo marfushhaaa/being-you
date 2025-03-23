@@ -99,7 +99,9 @@ input {
     margin-right: 8px;
     width: 130px;
 }
-
+/*#rUsername {
+    width: auto !important;
+  }*/
 
 /**
 * Login and registration screen
