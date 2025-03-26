@@ -1,12 +1,12 @@
+:host,
+:root {
+    --rem: 14;
+}
+
 * {
     font-family: "Inter", sans-serif;
     font-size: 14px;
     box-sizing: border-box;
-}
-
-:host,
-:root {
-    --rem: 14;
 }
 
 .container {
@@ -23,19 +23,18 @@ input {
 .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9 {
     padding: 8px;
 }
-
 .daily-challenge .row {
     margin: 0px;
 }
-
 .card-body {
-    background-color: #bababa;
     border: none;
     border-radius: 10px;
     padding: 8px;
     margin-right: 8px;
     width: 130px;
 }
+
+
 /*#rUsername {
     width: auto !important;
   }*/
@@ -223,7 +222,6 @@ footer {
 
 .main-container header {
     grid-area: main-header;
-    background-color: lightgray;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -241,7 +239,6 @@ footer {
 .aside-button {
     height: 48px;
     width: 48px;
-    background-color: gray;
     border-radius: 10px;
 }
 
@@ -254,7 +251,6 @@ footer {
 }
 .footer-div {
     padding: 8px;
-    background-color: lightgray;
     border-radius: 10px;
     display: flex;
     flex-wrap: nowrap;
@@ -265,7 +261,6 @@ footer {
 footer .aside-button {
     height: 30px;
     width: 30px;
-    background-color: gray;
 }
 footer form {
     margin: 0px;
@@ -274,13 +269,10 @@ footer form {
 footer input {
     border-style: hidden;
     font-weight: 600;
-    background-color: transparent;
 }
-
 
 .main-container  nav {
     grid-area: main-navigation;
-    background-color: lightgray;
     position: sticky;
     bottom: 0;
     z-index: 1000;
@@ -289,13 +281,11 @@ footer input {
 .main-container  main {
     grid-area: main-content;
     overflow-y: auto;
-    background-color: lightgray;
     padding: 8px;
     position: relative;
 }
 
 .youtube-card {
-    background-color: #bababa;
     border: none;
     border-radius: 10px;
     padding: 8px;
@@ -313,7 +303,6 @@ iframe {
 **/
 .daily-challenge {
     padding: 8px;
-    background-color: #bababa;
     border-radius: 10px;
 }
 
@@ -324,7 +313,6 @@ p.caption {
 .challenge-img {
    /* height: 80px;*/
     width: 100%;
-    background-color: rgb(239, 239, 239);
     border-radius: 10px;
     object-fit: cover;
 }
@@ -383,7 +371,6 @@ div.scrollmenu {
 
 .challenges .card {
     flex-direction: row;
-    background-color: transparent;
     border-style: none;
     width: fit-content;
     border-radius: 10px;
@@ -392,7 +379,6 @@ div.scrollmenu {
     position: absolute;
     z-index: 1000;
     right: 8;
-    background-color: gray;
     min-width: 48px;
     width: 48px;
     height: 62px;

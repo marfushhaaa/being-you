@@ -1,29 +1,95 @@
+:root {
+   --primary-color: rgb(0, 0, 0);
+   --secondary-color: rgb(128, 128, 128);
+   --tertiary-color: rgb(211, 211, 211);
+   --cards-color: rgb(186, 186, 186);
+}
+
 a {
-   color: black;
+   color: var(--primary-color);
    text-decoration: none;
 }
 
 p.caption {
-   color: rgb(128, 128, 128)
+   color: var(--secondary-color);
 }
+
+/**
+* Bootstrap styles
+**/
+.card-body {
+   background-color: var(--cards-color);
+}
+
 
 /**
 * Login and registration screen
 **/
-
 .registration-container .login-img {
-   background-color: rgb(128, 128, 128);
+   background-color: var(--secondary-color);
+
 }
 
 .form-control {
-   background-color: lightgray;
+   background-color: var(--tertiary-color);
 }
 
 button {
-   background-color: lightgray;
+   background-color: var(--tertiary-color);
    transition: background-color 300ms ease-in-out;
 }
 
 .messageDiv {
-   color: black;
+   color: var(--primary-color);
+}
+
+/**
+* Main page
+**/
+.main-container header {
+   background-color: var(--tertiary-color);
+}
+
+.aside-button {
+   background-color: var(--secondary-color);
+}
+
+.footer-div {
+   background-color: var(--tertiary-color);
+}
+
+footer .aside-button {
+   background-color: var(--secondary-color);
+}
+
+.main-container  nav {
+   background-color: var(--tertiary-color);
+}
+
+.main-container  main {
+   background-color: var(--tertiary-color);
+}
+
+.youtube-card {
+   background-color: var(--cards-color);
+}
+
+footer input {
+   background-color: transparent;
+}
+
+
+/**
+* Challenges
+**/
+.daily-challenge {
+   background-color: var(--cards-color);
+}
+
+.challenges button {
+   background-color: var(--secondary-color);
+}
+
+.challenges .card {
+   background-color: transparent;
 }
