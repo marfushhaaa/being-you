@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("POST request sent to Firebase Auth:", email);
         setTimeout(
           () =>
-            (window.location.href = "./../../pages/registration/index.html"),
+            (window.location.href = "./../../index.html"),
           2000
         );
       } catch (error) {

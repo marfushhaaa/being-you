@@ -67,7 +67,7 @@ const firebaseConfig = {
    localStorage.removeItem('loggedInUserId');
    signOut(auth)
    .then(()=>{
-      window.location.href = './../../pages/registration/index.html';
+      window.location.href = './../../index.html';
    })
    .catch((error)=>{
       console.log('Signout error ', error);
