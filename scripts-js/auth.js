@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("loggedInUserId", user.uid);
 
         setTimeout(
-          () => (window.location.href = "./../../pages/user/index.html"),
+          () => (window.location.href = "pages/user/index.html"),
           1500
         );
       } catch (error) {

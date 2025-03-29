@@ -51,7 +51,7 @@ input {
         "content";
     gap: 24px;
     align-items: center;
-    max-width: 400px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -61,6 +61,7 @@ input {
     height: 170px;
     grid-area: head-img;
     object-fit: cover;
+    object-position: center 85%;
 }
 
 .registration-container .content {

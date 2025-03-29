@@ -16,12 +16,12 @@
          "head-img content";
       column-gap: 40px;
       align-items: start;
-      max-width: 100%;
       height: 100vh;
    }
 
+
    .registration-container .login-img {
-      height: 100%;
+      min-height: 100%;
       width: 100%;
       object-fit: cover;
    }
@@ -32,8 +32,8 @@
 
 
    /**
-      * Fonts
-      **/
+   * Fonts
+   **/
    h1 {
       font-size: 2.857rem;
    }
@@ -80,5 +80,15 @@
 
    .form-control {
       font-size: 1.143rem;
+   }
+}
+@media (min-width: 480px) {
+
+   /**
+    * Login and registration screen
+    **/
+   .registration-container .login-img {
+      height: 230px;
+      object-position: center 85%;
    }
 }
