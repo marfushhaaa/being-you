@@ -87,7 +87,7 @@
    /**
     * Login and registration screen
     **/
-   .registration-container .login-img {
+   .login-img {
       height: 230px;
       object-position: center 85%;
    }

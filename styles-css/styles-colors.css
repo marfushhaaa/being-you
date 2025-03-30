@@ -3,6 +3,7 @@
    --secondary-color: rgb(128, 128, 128);
    --tertiary-color: rgb(211, 211, 211);
    --cards-color: rgb(186, 186, 186);
+   --white-color: rgb(255, 255, 255);
 }
 
 a {
@@ -92,4 +93,25 @@ footer input {
 
 .challenges .card {
    background-color: transparent;
+}
+
+/**
+* Categories
+**/
+.categorie-body {
+   background-color: var(--tertiary-color);
+}
+input[type="checkbox"] {
+   background-color: var(--white-color);
+   border: 0.12em solid var(--primary-color);
+}
+
+/* Check */
+input[type="checkbox"]::after {
+   color: var(--white-color);
+}
+
+/* Aktives Checkbox */
+input[type="checkbox"]:checked {
+   background-color: var(--secondary-color);
 }
