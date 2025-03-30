@@ -414,6 +414,7 @@ div.scrollmenu {
 .categorie .categorie-liste {
     max-height: 38vh;
     overflow-y: auto;
+    margin-top: 16px;
 }
 
 /*Checkbox*/

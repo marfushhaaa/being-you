@@ -30,7 +30,25 @@
       margin-top: 60px;
    }
 
-
+   /**
+    * Categories screen
+    **/
+   .categorie-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: none;
+      grid-template-areas:
+          "head-img content"
+          "head-img weiter-button";
+          column-gap: 40px;
+      align-items: start;
+      height: 100vh;
+      margin: 0 auto;
+   }
+   .categorie .categorie-liste {
+      max-height: 55vh;
+      overflow-y: auto;
+   }
    /**
    * Fonts
    **/
