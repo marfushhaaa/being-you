@@ -63,9 +63,9 @@ footer .aside-button {
    background-color: var(--secondary-color);
 }
 
-.main-container  nav {
+/*.main-container  nav {
    background-color: var(--tertiary-color);
-}
+}*/
 
 .main-container  main {
    background-color: var(--tertiary-color);
@@ -113,5 +113,10 @@ input[type="checkbox"]::after {
 
 /* Aktives Checkbox */
 input[type="checkbox"]:checked {
+   background-color: var(--secondary-color);
+}
+
+/* Navigation */
+nav > div {
    background-color: var(--secondary-color);
 }

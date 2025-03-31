@@ -64,6 +64,10 @@ input {
    font-weight: 400;
    line-height: 1.6;
 }
+#postAPost {
+   font-size: 1.286rem;
+   font-weight: 600;
+}
 
 label {
    font-family: var(--primary-font);
