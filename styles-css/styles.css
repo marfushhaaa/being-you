@@ -264,6 +264,7 @@ footer {
 }
 
 .footer-div {
+    position: sticky;
     padding: 8px;
     border-radius: 10px;
     display: flex;
@@ -369,7 +370,7 @@ div.scrollmenu {
     /**keep scrolling when
       *finger or cursor scrolling*/
     -webkit-overflow-scrolling: touch;
-    padding: 16 0 16 0;
+    padding: 16px 0 16px 0;
     border-radius: 10px;
 }
 
@@ -397,7 +398,7 @@ div.scrollmenu {
 .challenges button {
     position: absolute;
     z-index: 1000;
-    right: 8;
+    right: 8px;
     min-width: 48px;
     width: 48px;
     height: 62px;
