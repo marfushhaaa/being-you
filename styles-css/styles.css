@@ -4,7 +4,7 @@
 
 .container {
     margin: 0px;
-    padding: 16px;
+    padding: 35px 16px 16px 16px;
 }
 
 input {
@@ -127,7 +127,7 @@ button {
 .main-container {
     display: grid;
     grid-template-columns: none;
-    grid-template-rows: 75px 1fr 50px 50px;
+    grid-template-rows: 95px 1fr 50px 50px;
     grid-template-areas:
         "main-header"
         "main-content"
@@ -147,7 +147,7 @@ button {
     z-index: 1000;
     padding-left: 8px;
     padding-right: 8px;
-    padding-top: 16px;
+    padding-top: 35px;
 }
 
 .header-div {
@@ -200,7 +200,6 @@ footer input {
     border-style: hidden;
     font-weight: 600;
 }
-
 
 .main-container nav {
     grid-area: main-navigation;
