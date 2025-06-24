@@ -1,11 +1,4 @@
-:host,
-:root {
-    --rem: 14;
-}
-
 * {
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
     box-sizing: border-box;
 }
 
@@ -133,6 +126,7 @@ button {
 **/
 .main-container {
     display: grid;
+    grid-template-columns: none;
     grid-template-rows: 75px 1fr 50px 50px;
     grid-template-areas:
         "main-header"
@@ -169,6 +163,9 @@ button {
     width: 48px;
     border-radius: 10px;
 }
+.aside {
+    display: none;
+}
 
 .main-container footer {
     grid-area: main-footer;
@@ -204,11 +201,18 @@ footer input {
     font-weight: 600;
 }
 
+
 .main-container nav {
     grid-area: main-navigation;
     position: sticky;
     bottom: 0;
     z-index: 1000;
+}
+nav > a {
+    display: none;
+}
+nav > div {
+    display: block;
 }
 
 .main-container main {
@@ -244,7 +248,8 @@ p.caption {
 }
 
 .challenge-img {
-    /* height: 80px;*/
+    min-height: 80px;
+    max-height: 135px;
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
@@ -269,8 +274,19 @@ p.caption {
 }
 
 .daily-challenge button {
+    display: none;
     min-width: 48px;
     padding: 0px;
+}
+.challenge-infos > p{
+    display: none;
+}
+
+.daily-challenge .col-9 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 div.scrollmenu {

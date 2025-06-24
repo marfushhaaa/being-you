@@ -46,7 +46,7 @@
       margin: 0 auto;
    }
    .categorie .categorie-liste {
-      max-height: 55vh;
+      max-height: 38vh;
       overflow-y: auto;
    }
    /**
@@ -83,6 +83,10 @@
       font-size: 1.143rem;
    }
 
+   p.caption {
+      font-size: 1rem;
+   }
+
    input {
       font-size: 1.143rem;
    }
@@ -102,6 +106,76 @@
    .form-control {
       font-size: 1.143rem;
    }
+
+
+   /**
+   * Main page
+   **/
+   /*.main-container main {
+      padding: 0 100px 0 100px;
+   }*/
+
+   .main-container {
+      display: grid;
+      grid-template-rows: 60px 40px 1fr 75px;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas:
+          "main-header main-header"
+          "main-navigation main-navigation"
+          "main-content aside"
+          "main-footer main-footer";
+      max-height: 100vh;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 100px 0 100px;
+      gap: 8px;
+   }
+
+   nav > div {
+      display: none;
+   }
+   nav > a {
+      display: block;
+   }
+   nav {
+      align-items: center;
+   }
+
+   .aside {
+      width: 90%;
+      height: 300px;
+      background: gray;
+      border-radius: 10px;
+      display: block;
+      grid-area: aside;
+   }
+   .aside-button {
+      display: none;
+   }
+   .challenge-description {
+      max-height: none;
+   }
+
+   /*
+   * Challenges
+   */
+   .challenge-img {
+      height: 135px;
+   }
+   .daily-challenge .row {
+      max-width: 90%;
+   }
+   .daily-challenge button {
+      display: block;
+      min-width: 48px;
+      padding: 0px;
+      right: 20px;
+      width: 65px;
+      min-height: 35px;
+      top: 147px;
+      position: absolute;
+   }
+
 }
 @media (min-width: 480px) {
 
@@ -111,5 +185,13 @@
    .login-img {
       height: 230px;
       object-position: center 85%;
+   }
+
+   /*
+   * Challenges
+   */
+   .challenge-infos > p{
+      display: block;
+      margin-bottom: 0;
    }
 }

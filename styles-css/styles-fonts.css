@@ -6,9 +6,13 @@
    font-weight: 400;
    src: url('../components/fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+html {
+   font-size: 14px; 
+}
+ 
 body {
    font-family: "Inter", sans-serif;
-   font-size: 14px;
+   font-size: 1rem;
 }
 :root {
    --primary-font: "Inter", sans-serif;
@@ -117,4 +121,12 @@ button a{
 .form-control {
    font-family: var(--primary-font);
    font-size: 1rem;
+}
+
+
+nav > a {
+   font-family: var(--primary-font);
+   font-size: 1.286rem;
+   font-weight: 600;
+   line-height: 1.5;
 }
