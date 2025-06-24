@@ -155,6 +155,9 @@
    .challenge-description {
       max-height: none;
    }
+   .main-container nav {
+      display: flex;
+   }
 
    /*
    * Challenges

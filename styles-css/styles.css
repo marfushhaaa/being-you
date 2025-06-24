@@ -207,6 +207,7 @@ footer input {
     position: sticky;
     bottom: 0;
     z-index: 1000;
+    display: none;
 }
 nav > a {
     display: none;
