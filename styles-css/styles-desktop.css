@@ -6,6 +6,10 @@
 
 @media (min-width: 786px) {
 
+   .container {
+    margin: 0px;
+    padding: 16px 16px 16px 16px;
+}
    /**
     * Login and registration screen
     **/
@@ -142,11 +146,12 @@
    }
 
    .aside {
-      width: 90%;
-      height: 300px;
-      background: gray;
+      width: 220px;
+      height: 350px;
+      background: rgb(206, 206, 206);
       border-radius: 10px;
       display: block;
+      padding: 8px;
       grid-area: aside;
    }
    .aside-button {
