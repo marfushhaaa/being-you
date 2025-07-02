@@ -10,6 +10,15 @@
 input {
     border-radius: 10px;
 }
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+}
+
 
 /**
 * Bootstrap styles
@@ -100,8 +109,8 @@ button {
     min-height: 48px;
     min-width: 120px;
     width: inherit;
-    padding-left: 16px;
-    padding-right: 16px;
+    /*padding-left: 16px;
+    padding-right: 16px;*/
     border-style: none;
     margin-left: auto;
     margin-right: auto;
@@ -199,6 +208,7 @@ footer .aside-button {
 footer form {
     margin: 0px;
     margin-left: 8px;
+    width: 100%;
 }
 
 footer input {
@@ -245,9 +255,7 @@ iframe {
     border-radius: 10px;
 }
 .aside.community {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: none;
 }
 .aside .community-info {
     display: flex;

@@ -157,6 +157,11 @@
    .aside-button {
       display: none;
    }
+   .aside.community {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
    .challenge-description {
       max-height: none;
    }

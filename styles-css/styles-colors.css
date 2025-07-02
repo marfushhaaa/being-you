@@ -3,8 +3,19 @@
    --secondary-color: rgb(128, 128, 128);
    --tertiary-color: rgb(211, 211, 211);
    --cards-color: rgb(186, 186, 186);
+   --button-hover: rgb(167 167 167);
    --white-color: rgb(255, 255, 255);
 }
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+
 
 a {
    color: var(--primary-color);
