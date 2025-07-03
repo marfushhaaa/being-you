@@ -219,6 +219,14 @@
       overflow-y: auto;
    }
 
+
+   /*
+    * Communities
+    */
+   .communities {
+      height: 300px;
+   }
+
 }
 @media (min-width: 480px) {
 
