@@ -506,16 +506,17 @@ nav > div {
 **/
 .user-container {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 100px;
+    grid-template-columns: none;
+    grid-template-rows: 75px 1fr 50px 50px;
     grid-template-areas:
-        "user-header user-header"
-        "user-nav user-nav"
-        "user-main user-profile";
+        "user-header"
+        "user-profile"
+        "user-main"
+        "user-nav";
     max-height: 100vh;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 100px 0 100px;
+    padding: 0px;
     gap: 8px;
 }
 .user-container nav {
@@ -525,7 +526,7 @@ nav > div {
     grid-area: user-main;
 }
 .user-container .profile {
-    width: 300px;
+    width: 100%;
     height: fit-content;
     background: var(--tertiary-color);
     border-radius: 10px;
