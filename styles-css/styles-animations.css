@@ -3,6 +3,11 @@ button:hover {
    transition: background-color 200ms ease-in-out;
 }
 
+#logout:hover {
+   background-color: var(--button-hover);
+   transition: background-color 300ms ease-in-out;
+}
+
 nav > a:hover {
    color: var(--secondary-color);
    transition: color 200ms ease-in-out;

@@ -6,6 +6,9 @@
    --button-hover: rgb(167 167 167);
    --white-color: rgb(255, 255, 255);
 }
+header {
+   background-color: var(--tertiary-color);
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar-track {
@@ -58,9 +61,7 @@ button {
 /**
 * Main page
 **/
-.main-container header {
-   background-color: var(--tertiary-color);
-}
+
 
 .aside-button {
    background-color: var(--secondary-color);
@@ -130,4 +131,12 @@ input[type="checkbox"]:checked {
 /* Navigation */
 nav > div {
    background-color: var(--secondary-color);
+}
+
+/*
+ * User Page
+ */
+#logout {
+   background-color: rgb(227, 227, 227);
+   transition: background-color 300ms ease-in-out;
 }

@@ -10,6 +10,14 @@
 input {
     border-radius: 10px;
 }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 16px;
+}
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -93,6 +101,10 @@ input {
     margin-top: 0px;
     margin-bottom: 24px;
 }
+.registration-container button {
+    padding-left: 16px;
+    padding-right: 16px;
+}
 
 .form-control {
     height: 48px;
@@ -109,14 +121,11 @@ button {
     min-height: 48px;
     min-width: 120px;
     width: inherit;
-    /*padding-left: 16px;
-    padding-right: 16px;*/
     border-style: none;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
 }
-
 .messageDiv {
     opacity: 0;
     animation: fadeOut 7s forwards;
@@ -152,12 +161,6 @@ button {
 
 .main-container header {
     grid-area: main-header;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 16px;
 }
 
 .header-div {
@@ -494,4 +497,54 @@ nav > div {
     border-radius: 50px;
     height: 40px;
     width: 40px;
+}
+
+
+
+/**
+* User Page
+**/
+.user-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 100px;
+    grid-template-areas:
+        "user-header user-header"
+        "user-nav user-nav"
+        "user-main user-profile";
+    max-height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 100px 0 100px;
+    gap: 8px;
+}
+.user-container nav {
+    grid-area: user-nav;
+}
+.user-container main {
+    grid-area: user-main;
+}
+.user-container .profile {
+    width: 300px;
+    height: fit-content;
+    background: var(--tertiary-color);
+    border-radius: 10px;
+    display: block;
+    padding: 16px;
+    grid-area: user-profile;
+}
+.user-container header {
+    grid-area: user-header;
+}
+.user-container .profile .user-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.user-container .profile .user-profile .user-img {
+    width: 250px;
+    height: 250px;
+    align-self: center;
+    border-radius: 130px;
+    background-color: var(--secondary-color);
 }

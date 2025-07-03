@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         await setDoc(doc(db, "users", user.uid), { username, email, password });
 
         showMessage("Account created successfully", "signUpMessage");
+        localStorage.setItem("loggedInUserId", user.uid);
 
         console.log("POST request sent to Firebase Auth:", email);
         setTimeout(
