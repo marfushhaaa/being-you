@@ -523,6 +523,8 @@ nav > div {
     grid-area: user-nav;
 }
 .user-container main {
+    padding: 8px;
+    position: relative;
     grid-area: user-main;
 }
 .user-container .profile {
@@ -545,7 +547,14 @@ nav > div {
 .user-container .profile .user-profile .user-img {
     width: 250px;
     height: 250px;
+    display: flex;
     align-self: center;
+    align-items: center;
+    justify-content: center;
     border-radius: 130px;
     background-color: var(--secondary-color);
+}
+
+.user-img .fa-user {
+    font-size: 160px;
 }

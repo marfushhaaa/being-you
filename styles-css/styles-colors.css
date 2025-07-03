@@ -140,3 +140,6 @@ nav > div {
    background-color: rgb(227, 227, 227);
    transition: background-color 300ms ease-in-out;
 }
+.user-container main {
+   background-color: var(--tertiary-color);
+}
