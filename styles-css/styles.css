@@ -563,18 +563,24 @@ nav > div {
 /*
  * Communities
  */
-   .communities {
-      position: static;
-      margin-right: 0;
-      margin-bottom: 6px;
-      display: flex;
-      gap: 16px;
-      height: 36vh;
-      flex-direction: column;
-      overflow-y: scroll;
-   }
-   .communities .daily-challenge button {
+.communities {
+    position: static;
+    margin-right: 0;
+    margin-bottom: 6px;
+    display: flex;
+    gap: 16px;
+    height: 36vh;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.communities .daily-challenge button {
     margin-right: 8px;
-    margin-bottom: 16px;
-        position: static;
-    }
+    margin-bottom: 8px;
+    position: static;
+}
+.community .col-9 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
