@@ -18,7 +18,7 @@
    <link rel="stylesheet" href="./../../styles-css/styles-animations.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <script type="module" src="./../../scripts-js/userCategories.js"></script>
+   <script type="module" src="./../../scripts-js/userCommunities.js"></script>
    <title>Being You</title>
 </head>
 
@@ -34,8 +34,8 @@
             <p>You can choose more than one option or just skip</p>
             <h2>Choose a community</h2>
             <div class = "communities">
-               <div class="daily-challenge">
-               <p class = "caption"><em>health</em></p>
+               <div class="daily-challenge" >
+                  <p class = "caption"><em>health</em></p>
 
                   <div class="row">
                      <div class="col-3">
@@ -56,11 +56,11 @@
                         <button>Join</button>
                      </div-->
                   </div>
-                  <button>Join</button>
+                  <button class = "community-button" community-id="1">Join</button>
 
                </div>
-               <div class="daily-challenge">
-               <p class = "caption"><em>self-growth</em></p>
+               <div class="daily-challenge" >
+                  <p class = "caption"><em>self-growth</em></p>
 
                   <div class="row">
                      <div class="col-3">
@@ -81,11 +81,11 @@
                         <button>Join</button>
                      </div-->
                   </div>
-                  <button>Join</button>
+                  <button class = "community-button" community-id="2">Join</button>
 
                </div>
-               <div class="daily-challenge">
-               <p class = "caption"><em>sport</em></p>
+               <div class="daily-challenge" community-id="3">
+                  <p class = "caption"><em>sport</em></p>
 
                   <div class="row">
                      <div class="col-3">
@@ -106,14 +106,14 @@
                         <button>Join</button>
                      </div-->
                   </div>
-                  <button>Join</button>
+                  <button class = "community-button" community-id="2">Join</button>
 
                </div>
             </div>
          </section>
          <div class="weiter-button">
-            <button type="submit" id="saveCategories">Speichern und weiter</button>
-            <div id="categoriesMessage" class="messageDiv" style="display: none;"></div>
+            <a href="./../main/index.html"><button type="submit">Weiter</button></a>
+            <div id="communitiesMessage" class="messageDiv" style="display: none;"></div>
          </div>
       </div>
    </main>

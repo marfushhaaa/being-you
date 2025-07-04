@@ -7,6 +7,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
 import {
   getFirestore,
+  arrayUnion,
+  updateDoc,
   getDoc,
   setDoc,
   doc,
@@ -47,46 +49,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const auth = getAuth(app);
   const db = getFirestore(app);
 
-  /**
-   * Diese Funktion speichert die ausgewählte Categorien in Firebase mit Nutzer
-   */
+  // Warte auf Authentifizierung
   onAuthStateChanged(auth, async (user) => {
-    if (user) {
-        const docSnap = await getDoc(doc(db, "users", user.uid));
-        if (docSnap.exists()) {
-            const userData = docSnap.data();
-            if (userData.categories) {
-                userData.categories.forEach(category => {
-                    const checkbox = document.querySelector(`input[value="${category}"]`);
-                    if (checkbox) checkbox.checked = true;
-                });
-            }
-        }
+    if (!user) {
+      window.location.href = "./create-account.html";
     } else {
-        window.location.href = "./create-account.html"; //wenn user ist noch nicht eingeloggt
-    }
-  });
-  document.getElementById("saveCategories").addEventListener("click", async () => {
-    const checkboxes = document.querySelectorAll("input[name='categories']:checked");
-    const selectedCategories = Array.from(checkboxes).map(cb => cb.value);
-
-    try {
-        const user = auth.currentUser;
-        if (!user) {
-            showMessage("User not found!!", "categoriesMessage");
+      // Event-Listener für alle Community-Buttons
+      document.querySelectorAll(".community-button").forEach(button => {
+        button.addEventListener("click", async () => {
+          const communityId = button.getAttribute("community-id");
+          if (!communityId) {
+            showMessage("Keine Community-ID gefunden!", "communitiesMessage");
             return;
-        }
+          }
 
-        await setDoc(doc(db, "users", user.uid), { categories: selectedCategories }, { merge: true });
+          try {
+            const userRef = doc(db, "users", user.uid);
+            await updateDoc(userRef, {
+              communities: arrayUnion(communityId)
+            });
 
-        showMessage("Categories saved successfuly!", "categoriesMessage");
-        setTimeout(
-         ()=>
-            (window.location.href = "./communities.html"),
-         2000
-        );
-    } catch (error) {
-        console.error("Fehler beim speichern:", error);
+            showMessage("Community erfolgreich hinzugefügt!", "communitiesMessage");
+          } catch (error) {
+            console.error("Fehler beim Hinzufügen der Community:", error);
+            showMessage("Fehler beim Speichern", "communitiesMessage");
+          }
+        });
+      });
     }
   });
 });
+/**
+ * Doppelte Einträge werden vermieden durch arrayUnion
+ * Nur das Feld communities wird aktualisiert dank updateDoc
+ */

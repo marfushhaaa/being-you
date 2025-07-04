@@ -75,7 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const user = userCredential.user;
 
         //POST Anfrage
-        await setDoc(doc(db, "users", user.uid), { username, email, password });
+        await setDoc(doc(db, "users", user.uid), 
+        { username, 
+          email, 
+          password, 
+          communities: [], 
+          categories: [] 
+        });
 
         showMessage("Account created successfully", "signUpMessage");
         localStorage.setItem("loggedInUserId", user.uid);
